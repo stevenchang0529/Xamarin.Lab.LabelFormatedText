@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Xamarin.Lab.LabelFormatedText"
+             BindingContext="{local:MainViewModel}"
+             x:Class="Xamarin.Lab.LabelFormatedText.MainPage">
+
+    <StackLayout Orientation="Vertical" Padding="20,60" Spacing="20"  >
+        <Label  VerticalOptions="Center" VerticalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span TextColor="Black" Text="您的" FontSize="18"/>
+                    <Span TextColor="Green" Text="分數" FontSize="18"/>
+                    <Span TextColor="Orange" Text=":" FontSize="18"/>
+                    <Span TextColor="Red" Text="90" FontSize="26" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label FontSize="24">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding TeamA}" TextColor="Red"/>
+                    <Span Text=" : " TextColor="Black"/>
+                    <Span Text="{Binding TeamB}" TextColor="Green"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+    </StackLayout> 
+
+</ContentPage>
